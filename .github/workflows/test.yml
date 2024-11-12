@@ -29,7 +29,7 @@ jobs:
     needs: [my_testing]
     env:
       var1: "job variable1"
-      var2: "job variable2"
+      var2: "job variable_2"
     steps:
         - name: print hello message in deploy
           run: echo "hello world from deploy job"
@@ -38,7 +38,7 @@ jobs:
         - name: lockal variable
           run: |
             echo "var1 - ${{env.var1}}" 
-            echo "var2 - $var1" 
+            echo "hello my   $var2" 
             echo "lockal var - $lockar_var"
           env:
            lockar_var: "my lockal var" 
@@ -47,4 +47,4 @@ jobs:
         - name: clone dir my repo2
           uses: actions/checkout@v2
         - name: list dir
-          run: ls -la
+          run: echo "global  $APPLICATION_NAME"
