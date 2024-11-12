@@ -17,6 +17,8 @@ jobs:
         run: |
           echo "my application name -- ${{ env.APPLICATION_NAME }}"
           echo "my PACKAGE_NAME -- ${{ env.PACKAGE_NAME }}"
+      - name: list
+        run: ls -la
       - name: clone dir my repo
         uses: actions/checkout@v1
       - name: list dir
@@ -30,6 +32,8 @@ jobs:
           run: echo "hello world from deploy job"
         - name: my PACKAGE_NAME
           run: echo "my PACKAGE_NAME -- ${{ env.PACKAGE_NAME }}"
+        - nmae: list
+          run: ls -la
         - name: clone dir my repo2
           uses: actions/checkout@v2
         - name: list dir
