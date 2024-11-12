@@ -1,5 +1,7 @@
 name: my_first_test
-
+env:
+  APPLICATION_NAME: "my Flask"
+  PACKAGE_NAME    : "Flask_deploy_${{ github.sha }}"
 on: 
   push:
     branches: 
@@ -11,6 +13,10 @@ jobs:
     steps:
       - name: print hello message in testing
         run: echo "hello world from testing job" 
+      - name: echo env
+        run: |
+          echo "my application name -- ${{ env.APPLICATION_NAME }}"
+          echo "my PACKAGE_NAME -- ${{ env.PACKAGE_NAME }}"
         
   my_testing2:
     runs-on: ubuntu-latest
@@ -18,3 +24,5 @@ jobs:
     steps:
         - name: print hello message in deploy
           run: echo "hello world from deploy job"
+        - name: my PACKAGE_NAME
+          run: echo "my PACKAGE_NAME -- ${{ env.PACKAGE_NAME }}"
