@@ -1,1 +1,2 @@
-![my_first_test Status](https://img.shields.io/github/workflow/status/EdgarHarutyunyan2025/actions/test)
+Status of Last Deployment:<br>
+<img src="https://github.com/EdgarHarutyunyan2025/actions/workflows/test/badge.svg?branch=master"><br>
