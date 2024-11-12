@@ -1,22 +1,19 @@
-name: CI
+name: my_first_test
 
-on:
+on: 
   push:
-    branches:
+    branches: 
       - master
 
 jobs:
-  my_testing:
+  my_testing: 
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: List installed files (optional debug step)
-        run: ls -la
-
-      - name: echo hello world
-        run: echo "hello world"
-          
-      - name: pwd
-        run: pwd
+      - name: print hello
+        run: echo "hello world from testing job" 
+        
+  my_testing2:
+    runs-on: ubuntu-latest
+    steps:
+        - name: print hello
+          run: echo "hello world from deploy job"
