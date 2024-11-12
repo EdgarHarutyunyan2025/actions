@@ -1,4 +1,4 @@
-name: my_first_test
+name: test
 env:
   APPLICATION_NAME: "my Flask"
   PACKAGE_NAME    : "Flask_deploy_${{ github.sha }}"
