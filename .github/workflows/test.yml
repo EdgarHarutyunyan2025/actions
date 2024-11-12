@@ -38,7 +38,7 @@ jobs:
         - name: lockal variable
           run: |
             echo "var1 - ${{env.var1}}" 
-            echo "var2 - ${{env.var2}}" 
+            echo "var2 - $var1" 
             echo "lockal var - $lockar_var"
           env:
            lockar_var: "my lockal var" 
