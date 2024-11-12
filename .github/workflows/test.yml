@@ -41,7 +41,6 @@ jobs:
             echo "hello my   $var2" 
             echo "lockal var - $lockar_var"
             echo "global  $APPLICATION_NAME"
-            echo "global  $PACKAGE_NAME"
           env:
            lockar_var: "my lockal var" 
         - name: list
