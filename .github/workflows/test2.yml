@@ -47,3 +47,5 @@ jobs:
           run: ls -la
         - name: clone dir my repo2
           uses: actions/checkout@v4
+        - name: install
+          run:  pip install
