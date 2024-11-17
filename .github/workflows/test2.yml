@@ -26,9 +26,9 @@ jobs:
       - name: clone dir my repo
         run: git clone https://github.com/EdgarHarutyunyan2025/$MY_GUTHUB_REPO.git
       - name: cd dir
-        run:|
-            cd $MY_GUTHUB_REPO
-            ls -la
+        run: | 
+          cd $MY_GUTHUB_REPO
+          ls -la
 
   my_testing2:
     runs-on: ubuntu-latest
