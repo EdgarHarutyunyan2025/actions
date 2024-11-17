@@ -19,6 +19,10 @@ jobs:
           echo "my PACKAGE_NAME -- ${{ env.PACKAGE_NAME }}"
       - name: list
         run: ls -la
+      - name: git repo
+        run: |
+          git config --global user.name "EdgarHarutyunyan2025"
+          git config --global user.email "edgar_harutyunyan_2025@mail.ru"
       - name: clone dir my repo
         run: git clone git@github.com:EdgarHarutyunyan2025/actions.git
       - name: list dir
