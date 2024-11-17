@@ -1,6 +1,6 @@
 name: test
 env:
-  APPLICATION_NAME: "Flask application"
+  MY_GUTHUB_REPO: "actions"
   PACKAGE_NAME    : "Flask_deploy_${{ github.sha }}"
 on: 
   push:
@@ -24,7 +24,9 @@ jobs:
           git config --global user.name "EdgarHarutyunyan2025"
           git config --global user.email "edgar_harutyunyan_2025@mail.ru"
       - name: clone dir my repo
-        run: git clone https://github.com/EdgarHarutyunyan2025/actions.git
+        run: git clone https://github.com/EdgarHarutyunyan2025/$MY_GUTHUB_REPO.git
+      - name: cd dir
+        run: cd $MY_GUTHUB_REPO
       - name: list dir
         run: ls -la
 
