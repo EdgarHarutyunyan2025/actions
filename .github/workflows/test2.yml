@@ -1,6 +1,6 @@
 name: test
 env:
-  APPLICATION_NAME: "my Flask"
+  APPLICATION_NAME: "Flask application"
   PACKAGE_NAME    : "Flask_deploy_${{ github.sha }}"
 on: 
   push:
